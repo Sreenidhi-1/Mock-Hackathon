@@ -103,6 +103,7 @@ def two_opt_swap(tour, adj_matrix):
 
 
 
+print(initial_tour)
 optimized_tour, final_cost = two_opt_swap(initial_tour[:-1], adj_matrix)
 
 print("Initial Tour:", sample_path)

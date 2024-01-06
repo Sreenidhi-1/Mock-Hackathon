@@ -89,7 +89,7 @@ adj_matrix = np.array(adj_matrix)
 x,final,cost1,capacity = nearest_neighbor(adj_matrix)
 print(final,cost1,capacity1)
 
-x=1
+"""x=1
 d={}
 result={}
 for i in final:
@@ -98,9 +98,9 @@ for i in final:
     d['path'+str(x)]=(i)
     x+=1
 result[vehicles[0]]=d
-print(result)
+print(result)"""
 print("xxxxxxxxxx",x)
-"""main=[]
+main=[]
 c=[]
 for i in x:
     def calculate_tour_cost(tour, adj_matrix):
@@ -145,15 +145,15 @@ for i in x:
         final_cost = calculate_tour_cost(tour, adj_matrix)
         print("tourrrrrrr",tour)
         return tour, final_cost
-    print(i)
-    optimized_tour, final_cost = two_opt_swap(i[:-1], adj_matrix)
+    print("iiii",i)
+    optimized_tour, final_cost = two_opt_swap(i, adj_matrix)
     main.append(optimized_tour)
     c.append(final_cost)
 print(main,sum(c))
 def change(l):
     res=[]
     res.append('r0')
-    for i in l[1:]:
+    for i in l[1:-1]:
         res.append('n'+str(i-1))
     res.append('r0')
     print(len(res))
@@ -169,9 +169,9 @@ for i in main:
     d['path'+str(p)]=change(i)
     p+=1
 result[vehicles[0]]=d
-print(result)"""
+print(result)
 
-with open("Mock-Hackathon/level1b_output.json", "w") as outfile:
+with open("Mock-Hackathon/level1b1_output.json", "w") as outfile:
     json.dump(result, outfile)
 """out = open("Mock-Hackathon/Student Handout/Sampleoutput/level1b_output.json")
 
